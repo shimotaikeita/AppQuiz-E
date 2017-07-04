@@ -15,9 +15,20 @@ public class AppQuiz {
 			//カウントする
 			}
 		public static void situmon2(){
-			//質問内容を表示
-			//ユーザーが答えを入力
-			//カウントする
+			System.out.println("この中でホワイトハウスに無いものは？");
+			System.out.println("1.テニスコート");
+			System.out.println("2.映画館");
+			System.out.println("3.ボウリング場");
+			System.out.println("4.水族館");
+			System.out.print("答えを入力してください ：");
+			 answer = sc.nextInt();
+			if(answer == 4){
+			System.out.println("正解です！1点追加！");
+			   n ++;
+			}
+			else if(answer != 4){
+			System.out.println("残念！答えは、4.水族館です！");
+			}
 		}
 		public static void situmon3(){
 			//質問内容を表示
