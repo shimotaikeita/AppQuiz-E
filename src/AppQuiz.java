@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class AppQuiz {
@@ -13,6 +14,32 @@ public class AppQuiz {
 			//ユーザーが答えを入力
 			//答えを表示
 			//カウントする
+				boolean flag = true;
+				final int correct = 2 ;
+				System.out.println("同じような曲ばかりなのはどんなジャンルの音楽だろう？");
+				System.out.print("1:J-POP ,2:童謡 ,3:演歌 \n 番号を入力してください：");
+				int ans = 0;
+				while(flag){
+					try{
+						ans = sc.nextInt();
+						flag = false;
+						if(ans < 1 || ans > 3){
+							System.out.println("１～３のどれかを選んでください\n番号を入力してください：");
+							flag = true;
+						}
+					}catch(InputMismatchException e){
+						System.out.println("１～３のどれかを選んでください\n番号を入力してください：");
+						flag = true;
+					}
+				}
+				if(ans == correct){
+					System.out.println("正解です");
+					n += 1;
+				}else{
+					System.out.println("不正解です");
+					System.out.println("正解は2：童謡でした。");
+					n += 0;
+				}
 			}
 		public static void situmon2(){
 			System.out.println("この中でホワイトハウスに無いものは？");
