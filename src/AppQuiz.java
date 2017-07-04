@@ -36,11 +36,16 @@ public class AppQuiz {
 
 		}
 		public static void situmon5(){
-			//質問内容を表示
-			//ユーザーが答えを入力
-			//答えを表示
-			//カウントする
+			System.out.println("東京タワーの高さは？");
+			System.out.println("1:1.5M, 2:200M, 3:333M, 4:114514M");
 
+			answer = sc.nextInt();
+
+			System.out.println("答えは3の333Mでした。");
+
+			if(answer == 3){
+				n++;
+			}
 		}
 
 		public static void main(String[] args) {
