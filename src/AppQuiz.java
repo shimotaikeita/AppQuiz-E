@@ -58,10 +58,15 @@ public class AppQuiz {
 			}
 		}
 		public static void situmon3(){
-			//質問内容を表示
-			//ユーザーが答えを入力
-			//答えを表示
-			//カウントする
+			System.out.println("光の三原色、赤と青とあとひとつは？ 1:黄色 2:緑 3: 白");
+			answer =sc.nextInt();
+			if(answer == 2){
+				System.out.println("正解です");
+				n++;
+			}else{
+				System.out.println("違います");
+			}
+
 
 		}
 		public static void situmon4(){
