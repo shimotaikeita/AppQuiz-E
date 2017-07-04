@@ -65,10 +65,12 @@ public class AppQuiz {
 
 		}
 		public static void situmon4(){
-			//質問内容を表示
-			//ユーザーが答えを入力
-			//答えを表示
-			//カウントする
+			System.out.println("今年は平成何年？");
+			answer = sc.nextInt();
+			System.out.println("答えは平成29年です");
+			if(answer == 29) {
+				n++;
+			}
 
 		}
 		public static void situmon5(){
