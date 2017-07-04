@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class AppQuiz {
@@ -13,17 +14,59 @@ public class AppQuiz {
 			//ユーザーが答えを入力
 			//答えを表示
 			//カウントする
+				boolean flag = true;
+				final int correct = 2 ;
+				System.out.println("同じような曲ばかりなのはどんなジャンルの音楽だろう？");
+				System.out.print("1:J-POP ,2:童謡 ,3:演歌 \n 番号を入力してください：");
+				int ans = 0;
+				while(flag){
+					try{
+						ans = sc.nextInt();
+						flag = false;
+						if(ans < 1 || ans > 3){
+							System.out.println("１～３のどれかを選んでください\n番号を入力してください：");
+							flag = true;
+						}
+					}catch(InputMismatchException e){
+						System.out.println("１～３のどれかを選んでください\n番号を入力してください：");
+						flag = true;
+					}
+				}
+				if(ans == correct){
+					System.out.println("正解です");
+					n += 1;
+				}else{
+					System.out.println("不正解です");
+					System.out.println("正解は2：童謡でした。");
+					n += 0;
+				}
 			}
 		public static void situmon2(){
-			//質問内容を表示
-			//ユーザーが答えを入力
-			//カウントする
+			System.out.println("この中でホワイトハウスに無いものは？");
+			System.out.println("1.テニスコート");
+			System.out.println("2.映画館");
+			System.out.println("3.ボウリング場");
+			System.out.println("4.水族館");
+			System.out.print("答えを入力してください ：");
+			 answer = sc.nextInt();
+			if(answer == 4){
+			System.out.println("正解です！1点追加！");
+			   n ++;
+			}
+			else if(answer != 4){
+			System.out.println("残念！答えは、4.水族館です！");
+			}
 		}
 		public static void situmon3(){
-			//質問内容を表示
-			//ユーザーが答えを入力
-			//答えを表示
-			//カウントする
+			System.out.println("光の三原色、赤と青とあとひとつは？ 1:黄色 2:緑 3: 白");
+			answer =sc.nextInt();
+			if(answer == 2){
+				System.out.println("正解です");
+				n++;
+			}else{
+				System.out.println("違います");
+			}
+
 
 		}
 		public static void situmon4(){
